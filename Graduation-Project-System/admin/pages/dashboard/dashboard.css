@@ -1,0 +1,161 @@
+/* Dashboard Main Content Only */
+/* ─── STATS CARDS (Title + Icon + Number Only) ─── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    border: 1px solid #E2E8F0;
+}
+
+/* العنوان */
+.stat-card .stat-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1E293B;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* الأيقونة الدائرية */
+.stat-card .stat-icon-wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #EBF0F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #2563EB;
+    flex-shrink: 0;
+}
+
+/* الرقم الداخلي */
+.stat-card .stat-number {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0F172A;
+    background: #E2E8F0;
+    border-radius: 20px;
+    padding: 6px 20px;
+    line-height: 1;
+}
+
+.registration-main-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 45px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    border: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 20px;
+}
+
+.reg-status-body { margin-bottom: 24px; }
+.status-open-text { color: #10B981; font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 6px; }
+.status-closed-text { color: #EF4444; font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 6px; }
+.status-desc { font-size: 13px; color: #64748B; }
+
+.btn-toggle-reg {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 40px;
+    cursor: pointer;
+}
+/* ─── TOPBAR ALIGNMENT & FILTERS FIX ─── */
+.topbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important; /* يحط عنوان الصفحة شمال والقائمة يمين */
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.topbar-title h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1E293B;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+}
+
+.topbar-filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* تنسيق الـ Dropdowns الشيك الموحد */
+.custom-select {
+    padding: 10px 18px;
+    border-radius: 20px; /* الحواف المدورة */
+    border: 1px solid #CBD5E1;
+    background-color: #FFFFFF;
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.custom-select:hover {
+    border-color: #94A3B8;
+    color: #1E293B;
+}
+
+.custom-select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .topbar-title h1 { font-size: 20px; }
+    .topbar-filters { width: 100%; }
+    .topbar-filters .custom-select { flex: 1; min-width: 140px; }
+}
+
+@media (max-width: 480px) {
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .registration-main-card { padding: 32px 18px; }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Developers - Graduation Project Management System</title>
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../shared/css/reset.css">
+    <link rel="stylesheet" href="../../shared/css/layout.css">
+    
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="developers.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <!-- Standard Sidebar -->
+        <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap sidebar-logo"></i>
+            <h2>Graduation Project<br>Management System</h2>
+        </div>
+
+        <hr class="sidebar-divider">
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="../dashboard/index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../users-programs/index.html">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Users & Programs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../projects/index.html">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../reports/index.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../developers/index.html" class="active">
+                        <i class="fa-solid fa-user-group"></i>
+                        <span>About Developers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../../index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- الصورة التوضيحية تحت -->
+            <div class="sidebar-illustration">
+                <img src="../../shared/assests/image.png" alt="Illustration">
+            </div>
+        </nav>
+    </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Topbar Header -->
+            <div class="topbar">
+                <button type="button" class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="topbar-title">
+                    <h1>
+                        <i class="fa-solid fa-users"></i>
+                        <span>About Developers</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Developers Content -->
+            <div class="developers-container">
+                <h2 class="developers-main-title">System Development Team</h2>
+
+                <div class="developers-grid">
+                    <!-- 1. Amr Khaled -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/amr-khaled.jpg" alt="Amr Khaled" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Amr Khaled</h3>
+                        <span class="dev-role">Frontend Developer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/amrkhaled11" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Amr-kha1ed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Mostafa Abdeldayem -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/mostafa-abdeldayem.jpg" alt="Mostafa Abdeldayem" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Mostafa Abdeldayem</h3>
+                        <span class="dev-role">Frontend Developer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/mostafa-yasser-4babb32b0" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/most-eng" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Salma Kelany -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/salma-kilany.jpg" alt="Salma Kilany" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Salma Kelany</h3>
+                        <span class="dev-role">AI Developer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/salma-kelany?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/salmakelany" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Doha Essam -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/doha-essam.jpg" alt="Doha Essam" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Duha Essam</h3>
+                        <span class="dev-role">UI/UX Designer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/duha-abuelhadid?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/onlydu7a" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 5. Haneen Wael -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/haneen-wael.jpg" alt="Haneen Wael" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Haneen Wael</h3>
+                        <span class="dev-role">Backend Developer</span>
+                        <div class="dev-socials">
+                            <a href="http://linkedin.com/in/haneenzarifa" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Z-Haneen" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 6. Roa Atef -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/roa-atef.jpg" alt="Roa Atef" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Roaa Atef</h3>
+                        <span class="dev-role">Backend Developer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/roaa-atif-80217728a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://search.app/boW5ch7hY5BDnpXM9" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 7. Nada Hnaidq -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/nada-hnaidq.jpg" alt="Nada Hnaidq" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Nada Henidak</h3>
+                        <span class="dev-role">Mobile App Developer</span>
+                        <div class="dev-socials">
+                            <a href="www.linkedin.com/in/nada-henidak-37293b2a7" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/NadaHenidak199" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 8. Nada Shaaban -->
+                    <div class="developer-card">
+                        <div class="dev-avatar">
+                            <img src="../../shared/assests/developers/nada-shaaban.jpg" alt="Nada Shaaban" class="dev-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <i class="fa-regular fa-user dev-avatar-fallback"></i>
+                        </div>
+                        <h3 class="dev-name">Nada Shaaban</h3>
+                        <span class="dev-role">Mobile App Developer</span>
+                        <div class="dev-socials">
+                            <a href="https://www.linkedin.com/in/nada-gadelrab-6a73012a4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/nadagadalrab" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="dev-footer">
+                    <p>All Rights Reserved &copy; 2026</p>
+                </footer>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../../shared/js/layout.js"></script>
+</body>
+</html>

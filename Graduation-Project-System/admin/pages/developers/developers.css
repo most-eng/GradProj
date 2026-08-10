@@ -1,0 +1,151 @@
+/* ==========================================================================
+   DEVELOPERS PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+.developers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.developers-main-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* Grid Layout (4 columns x 2 rows) */
+.developers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Developer Card Styling */
+.developer-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #E2E8F0;
+    border-top: 4px solid #2563EB;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Avatar Circle */
+.dev-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #475569;
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: #F1F5F9;
+}
+
+/* Real developer photo — drop a file in the path set on the <img src="">
+   in the HTML. If the file is missing/not set yet, onerror hides the
+   image and the fallback person icon below shows instead, so cards
+   never break while photos are being added one by one. */
+.dev-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dev-avatar-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Developer Info */
+.dev-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.dev-role {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748B;
+    min-height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+.dev-role small {
+    font-size: 11px;
+    color: #2563EB;
+    font-weight: 700;
+}
+
+/* Social Links Icons */
+.dev-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dev-socials a {
+    font-size: 20px;
+    color: #0284C7; /* LinkedIn / GitHub primary color */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.dev-socials a:hover {
+    color: #0369A1;
+    transform: scale(1.15);
+}
+
+/* Footer Copyright Notice */
+.dev-footer {
+    margin-top: auto;
+    text-align: center;
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 1024px) {
+    .developers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .developers-grid {
+        grid-template-columns: 1fr;
+    }
+}

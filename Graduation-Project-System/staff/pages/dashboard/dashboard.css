@@ -1,0 +1,122 @@
+.section-header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.section-header-title i {
+    font-size: 22px;
+    color: #1E293B;
+}
+
+.section-header-title h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1E293B;
+}
+
+/* Projects Grid Container */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1E293B;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-meta-details {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 13.5px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.project-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-actions-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Empty State (لا توجد مشاريع) */
+.empty-state-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+}
+
+.empty-state-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #94A3B8;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .project-meta-details {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .project-actions-box {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        padding: 18px 20px;
+    }
+    .empty-state-box {
+        min-height: 250px;
+    }
+    .empty-state-text {
+        font-size: 18px;
+        text-align: center;
+    }
+}
