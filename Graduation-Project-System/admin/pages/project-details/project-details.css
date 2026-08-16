@@ -1,0 +1,577 @@
+/* Breadcrumb Title */
+.breadcrumb-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #1E293B;
+}
+
+.breadcrumb-title span {
+    color: #64748B;
+    font-weight: 600;
+}
+
+/* Grid Layout for Project Details */
+.project-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* الكروت الشمال والعمود اليمين للمعطيات */
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Card General Styling */
+.details-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.card-header-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+/* Project Info List */
+.info-block {
+    margin-bottom: 18px;
+}
+
+.info-block:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748B;
+    margin-bottom: 6px;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.6;
+}
+
+/* Team Info Horizontal Grid */
+.team-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Tables for Leader & Members */
+.mini-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.mini-table th {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748B;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.mini-table td {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1E293B;
+    padding: 12px;
+    border-bottom: 1px solid #F8FAFC;
+}
+
+.arabic-name {
+    font-weight: 700;
+    direction: rtl;
+    text-align: left;
+}
+
+/* Action Buttons */
+.btn-status-action {
+    width: 100%;
+    background-color: #0D47A1;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-top: 20px;
+}
+
+.btn-status-action:hover {
+    background-color: #0A3882;
+}
+
+.back-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-back {
+    background-color: #0D47A1;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 48px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition);
+}
+
+.btn-back:hover {
+    background-color: #0A3882;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .project-details-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .details-card {
+        padding: 18px;
+    }
+    .btn-back {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 24px;
+    }
+}
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    display: none; /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 520px;
+    padding: 28px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* LTR Position */
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #0F172A;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.modal-close-btn:hover {
+    color: #EF4444;
+}
+
+.modal-section {
+    margin-bottom: 22px;
+}
+
+.modal-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 12px;
+}
+
+.modal-section-title i {
+    color: #0D47A1;
+}
+
+/* ==========================================================================
+   FIX MODAL LAYOUT & STYLING
+   ========================================================================== */
+
+/* الخلفية المعتتمة ورا النافذة */
+.modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    backdrop-filter: blur(5px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 99999 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* الكارت الأبيض المجمع */
+.modal-card {
+    background: #FFFFFF !important;
+    width: 90% !important;
+    max-width: 550px !important;
+    max-height: 85vh !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    border: 1px solid #E2E8F0 !important;
+}
+
+/* الهيدر */
+.modal-header {
+    padding: 20px 24px !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #F8FAFC !important;
+}
+
+.modal-header h3 {
+    margin: 0 !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    color: #0F172A !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.btn-close-modal {
+    background: transparent !important;
+    border: none !important;
+    font-size: 20px !important;
+    color: #64748B !important;
+    cursor: pointer !important;
+}
+
+/* جسم النافذة والفروم */
+.modal-body {
+    padding: 24px !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+}
+
+.form-group label {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.label-with-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+/* Compact horizontal row used for Project Status & Final Decision */
+.modal-info-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.modal-info-row label {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+}
+
+.modal-info-row label i {
+    color: #0D47A1 !important;
+}
+
+/* Small helper line under the status badge explaining what phase the
+   project is in right now, and what happens when "Send for Review" is
+   clicked next. */
+.modal-phase-hint {
+    font-size: 12.5px !important;
+    color: #64748B !important;
+    margin: -6px 0 4px !important;
+}
+
+/* Hides a modal row entirely — used to hide "Final Decision" until staff
+   have finished reviewing the project. */
+.modal-info-row.hidden,
+.form-group.hidden {
+    display: none !important;
+}
+
+/* Read-only status badge (Project Status is system-controlled, not editable) */
+.modal-status-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 6px 16px !important;
+    border-radius: 50px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    background: rgba(245, 158, 11, 0.12) !important;
+    color: #B45309 !important;
+}
+
+.modal-status-badge .status-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: #F59E0B !important;
+    flex-shrink: 0 !important;
+}
+
+.modal-status-badge.status-under-review {
+    background: #E0F2FE !important;
+    color: #075985 !important;
+}
+.modal-status-badge.status-under-review .status-dot {
+    background: #0284C7 !important;
+}
+
+.modal-status-badge.status-under-decision {
+    background: #F3E8FF !important;
+    color: #6B21A8 !important;
+}
+.modal-status-badge.status-under-decision .status-dot {
+    background: #9333EA !important;
+}
+
+/* Compact select used for Final Decision */
+.modal-select-compact {
+    padding: 8px 14px !important;
+    border-radius: 50px !important;
+    border: 1px solid #CBD5E1 !important;
+    font-family: inherit !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    background-color: #F8FAFC !important;
+    cursor: pointer !important;
+    max-width: 220px !important;
+}
+
+/* انضباط الـ Selects والـ Textarea */
+.modal-select, 
+.custom-textarea {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border-radius: 10px !important;
+    border: 1px solid #CBD5E1 !important;
+    font-family: inherit !important;
+    font-size: 13px !important;
+    background-color: #FFFFFF !important;
+    box-sizing: border-box !important;
+}
+
+.btn-add-reviewer {
+    background: #E0E7FF !important;
+    color: #2563EB !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+/* Footer */
+
+.modal-footer {
+    padding: 16px 24px !important;
+    border-top: 1px solid #E2E8F0 !important;
+    background: #F8FAFC !important;
+}
+
+.btn-confirm-save {
+    width: 100% !important;
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+/* تنسيق هيدر الكومنت وزر المسح */
+.comment-card {
+    background: #F1F5F9;
+    border-left: 4px solid #0284C7;
+    padding: 10px 14px;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 8px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.comment-author {
+    font-weight: 800;
+    font-size: 13px;
+    color: #0F172A;
+}
+
+.btn-delete-comment {
+    background: transparent;
+    border: none;
+    color: #EF4444;
+    cursor: pointer;
+    font-size: 13px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.btn-delete-comment:hover {
+    opacity: 1;
+}
+/* Reviewer Picker List Style */
+.doctors-picker-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.doctor-pick-item {
+    padding: 10px 14px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1E293B;
+    transition: all 0.2s ease;
+}
+
+.doctor-pick-item:hover {
+    background: #EFF6FF;
+    border-color: #2563EB;
+    color: #2563EB;
+}
+
+/* تنسيق شكل الـ Reviewer بعد ما يترزع جوه الـ modal الأصلي */
+.reviewer-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    color: #1E293B;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.reviewer-item:last-child {
+    margin-bottom: 0;
+}
+
+.btn-delete-reviewer {
+    background: #FEE2E2;
+    border: none;
+    color: #EF4444;
+    cursor: pointer;
+    font-size: 13px;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

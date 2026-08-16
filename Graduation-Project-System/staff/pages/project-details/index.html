@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Staff Portal</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="../../shared/css/reset.css">
+    <link rel="stylesheet" href="../../shared/css/layout.css">
+    <!-- Page Custom Style -->
+    <link rel="stylesheet" href="project-details.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-graduation-cap sidebar-logo"></i>
+                <h2>Graduation Projects<br>Review System</h2>
+            </div>
+            
+            <hr class="sidebar-divider">
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="../dashboard/index.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../developers/index.html">
+                            <i class="fa-solid fa-users"></i>
+                            <span>About Developers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="staffLogoutBtn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sidebar-illustration">
+                    <img src="../../shared/assests/image.png" alt="Illustration">
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Topbar Header -->
+            <div class="topbar">
+                <button type="button" class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="user-profile-badge">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span id="loggedInDoctorName">Dr. Mostafa Shobeir</span>
+                </div>
+                <div class="breadcrumb-title">
+                    <i class="fa-solid fa-house"></i>
+                    Home / <span>View Details</span>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="project-details-grid animate-fade-up">
+
+                <!-- Left Column: Team & Members Info -->
+                <div class="details-column">
+
+                    <!-- 1. Team Information -->
+                    <div class="details-card">
+                        <h3 class="card-header-title">Team Information</h3>
+                        <div class="team-info-grid">
+                            <div class="info-block">
+                                <div class="info-label">Department</div>
+                                <div class="info-value" id="pDepartment">Computer Science</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-label">Program</div>
+                                <div class="info-value" id="pProgram">Computer Science</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-label">Academic Year</div>
+                                <div class="info-value" id="pAcademicYear">2025/2026</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-label">Project Status</div>
+                                <div class="info-value"><span id="pStatus" class="status-badge status-warning">Pending Review</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Team Leader -->
+                    <div class="details-card">
+                        <h3 class="card-header-title">Team Leader</h3>
+                        <div class="table-scroll">
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Role / Track</th>
+                                    <th>Student ID</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pLeaderTableBody">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+
+                    <!-- 3. Team Members -->
+                    <div class="details-card">
+                        <h3 class="card-header-title">Team Members</h3>
+                        <div class="table-scroll">
+                        <table class="mini-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Role / Track</th>
+                                    <th>Student ID</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pMembersTableBody">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Project Details -->
+                <div class="details-column">
+                    <div class="details-card">
+                        <h3 class="card-header-title">Project Information</h3>
+
+                        <div class="info-block">
+                            <div class="info-label">Project Title</div>
+                            <div class="info-value" id="pTitle">Potato Rot Processing System</div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">Project Idea</div>
+                            <div class="info-value" id="pIdea">Loading project idea...</div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">Problem Definition</div>
+                            <div class="info-value" id="pProblem">Loading problem statement...</div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">Problem Objectives</div>
+                            <div class="info-value" id="pObjectives">Loading problem objectives...</div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">Expected Contribution</div>
+                            <div class="info-value" id="pContribution">Loading expected contribution...</div>
+                        </div>
+
+                        <button class="btn-status-action" id="openReviewModalBtn">
+                            <i class="fa-solid fa-clipboard-check"></i> Review Project
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Return Back Button -->
+            <div class="back-button-wrapper">
+                <a href="../dashboard/index.html" class="btn-back">
+                    Back
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Review Modal (شاشة المراجعة المنبثقة) -->
+    <div id="reviewModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Review Project Decision</h2>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <form id="reviewForm">
+                    <label class="form-label">Select Project Status:</label>
+                    <div class="radio-options">
+                        <label class="radio-card success">
+                            <input type="radio" name="reviewStatus" value="Accepted" required>
+                            <span>🟢 Accepted</span>
+                        </label>
+                        <label class="radio-card warning">
+                            <input type="radio" name="reviewStatus" value="Minor revision">
+                            <span>🟠 Needs Minor Revision</span>
+                        </label>
+                        <label class="radio-card warning">
+                            <input type="radio" name="reviewStatus" value="Major revision">
+                            <span>🟠 Needs Major Revision</span>
+                        </label>
+                        <label class="radio-card danger">
+                            <input type="radio" name="reviewStatus" value="Rejected">
+                            <span>🔴 Rejected</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doctorComment" class="form-label">Reviewer Comments / Notes:</label>
+                        <textarea id="doctorComment" rows="4" placeholder="Write your feedback for the students or admin here..." required></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="cancelModalBtn" class="btn btn-outline-primary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/layout.js"></script>
+    <script src="../../shared/js/animations.js"></script>
+    <script src="project-details.js"></script>
+</body>
+</html>
