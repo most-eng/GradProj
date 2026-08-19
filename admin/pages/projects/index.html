@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Management - Graduation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/css/reset.css">
+    <link rel="stylesheet" href="../../shared/css/layout.css">
+    <link rel="stylesheet" href="../../shared/css/components.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+<div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-graduation-cap sidebar-logo"></i>
+            <h2>Graduation Project<br>Management System</h2>
+        </div>
+        
+        <hr class="sidebar-divider">
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="../dashboard/index.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+                <li><a href="../users-programs/index.html"><i class="fa-solid fa-user-plus"></i><span>Staff and Programs</span></a></li>
+                <li><a href="../projects/index.html" class="active"><i class="fa-solid fa-briefcase"></i><span>Projects</span></a></li>
+                <li><a href="../reports/index.html"><i class="fa-solid fa-file-lines"></i><span>Reports</span></a></li>
+                <li><a href="../developers/index.html"><i class="fa-solid fa-user-group"></i><span>About Developers</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-illustration">
+            <img src="../../shared/assests/image.png" alt="Graduation Illustration">
+        </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <button type="button" class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="topbar-title">
+                <h1><i class="fa-solid fa-briefcase"></i> Projects Management</h1>
+            </div>
+
+            <div class="topbar-filters">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="projectSearchInput" placeholder="Search by project, student, or ID...">
+                </div>
+
+                <select id="academicYearFilter" class="custom-select">
+                    <option value="2026/2027">2026/2027</option>
+                </select>
+
+                <select id="programFilter" class="custom-select">
+                    <option value="">Program</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Projects Table Section -->
+        <section class="projects-card animate-fade-up">
+            <div class="custom-table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Project Title</th>
+                            <th>Team Leader</th>
+                            <th>Members Count</th>
+                            <th>Leader ID</th>
+                            <th>Status</th>
+                            <th>View Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projectsTableBody">
+                        <!-- Rendered via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="../../shared/js/api.js"></script>
+<script src="../../shared/js/layout.js"></script>
+<script src="../../shared/js/animations.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>
